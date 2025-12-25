@@ -89,6 +89,8 @@
             display: flex;
             flex-direction: column;
             backdrop-filter: blur(20px);
+            height: 100vh;
+            overflow: hidden;
         }
 
         .sidebar-header {
@@ -124,6 +126,8 @@
             padding: 20px;
             flex: 1;
             overflow-y: auto;
+            min-height: 0;
+            /* Important for flex children to scroll */
         }
 
         .section-header {
@@ -183,6 +187,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            flex-shrink: 0;
+            /* Prevent footer from shrinking */
         }
 
         /* === MAIN CONTENT === */
@@ -192,6 +198,8 @@
             flex-direction: column;
             gap: 24px;
             max-width: 1200px;
+            height: 100vh;
+            overflow-y: auto;
         }
 
         /* === SEARCH BAR (Modern) === */
@@ -992,11 +1000,13 @@
 
         // === DISPLAY ===
         function showOnDisplay() {
-            if (currentVerse && displayWindow && !displayWindow.closed) {
+            if (!currentVerse) return;
+
+            if (displayWindow && !displayWindow.closed) {
                 displayWindow.postMessage({ type: 'SHOW_VERSE', data: currentVerse }, '*');
                 status.innerText = `📡 ${currentVerse.reference}`;
                 status.className = 'status-pill broadcasting';
-            } else if (!displayWindow || displayWindow.closed) {
+            } else {
                 status.innerText = '⚠️ Откройте экран';
                 status.className = 'status-pill error';
             }
