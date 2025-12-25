@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **Localized Book Names:** Book titles now display in Kazakh when KTB is selected.
   - **Localized Search:** Support for searching books using Kazakh names and abbreviations (e.g., "Жар", "Матай").
 - **UI/UX:** Modern 2024-2025 aesthetics with Aurora gradients, Glassmorphism, and Bento grid layout.
+  - Removed redundant "Translation" info card.
+  - Redesigned bottom layout into a compact 3-column bento grid.
+  - Moved broadcast controls to a dedicated "Эфир" (Live) panel.
 - **Notes Feature**: Ability to broadcast custom text notes to the display screen.
 - **Git Integration**: Initialized Git repository and restructured project layout.
 

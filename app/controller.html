@@ -313,7 +313,7 @@
         /* === BENTO CARDS === */
         .bento-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
             flex: 1;
         }
@@ -758,53 +758,45 @@
                 <div class="bento-card">
                     <div class="card-header">
                         <span class="card-label">Быстрая Заметка</span>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="showNote()"
+                                style="font-size: 13px; padding: 8px 16px;">
+                                📡 В Эфир
+                            </button>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; height: 100%;">
+                        <textarea id="note-input" class="edit-area active"
+                            style="flex:1; font-size:16px; padding:16px; display:block; min-height: 120px; resize: none;"
+                            placeholder="Введите текст объявления..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Live Control Card -->
+                <div class="bento-card">
+                    <div class="card-header">
+                        <span class="card-label">Эфир</span>
+                        <div class="status-indicator live-pulse"></div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 12px; flex: 1;">
-                        <textarea id="note-input" class="edit-area active"
-                            style="min-height: 80px; font-size:16px; padding:12px; display:block;"
-                            placeholder="Текст для экрана..."></textarea>
-
-                        <div style="display:flex; gap:8px;">
-                            <button class="btn btn-primary" onclick="showNote()" style="flex:1;">
-                                📡 Показать
-                            </button>
-                            <button class="btn btn-secondary" onclick="hideOnDisplay()" title="Очистить экран">
-                                ⬛
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Info/Control Card -->
-                <div class="bento-card">
-                    <div class="card-header">
-                        <span class="card-label">Управление</span>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 12px; flex: 1; justify-content: center;">
                         <button class="btn btn-success" id="btn-broadcast" onclick="showOnDisplay()" disabled
-                            style="width: 100%;">
-                            📡 Транслировать Стих
+                            style="width: 100%; height: 50px; font-size: 15px;">
+                            📡 Стих в Эфир
+                        </button>
+
+                        <button class="btn btn-secondary" onclick="hideOnDisplay()" title="Очистить экран"
+                            style="width: 100%; color: var(--text-tertiary); border-style: dashed;">
+                            ⬛ Скрыть (Esc)
                         </button>
                     </div>
-                    <div style="margin-top: auto; padding-top: 16px; font-size: 12px; color: var(--text-tertiary);">
-                        <strong>Горячие клавиши:</strong><br>
-                        Enter — поиск<br>
-                        Ctrl+Enter — стих в эфир<br>
-                        Esc — очистить экран
+
+                    <div
+                        style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--glass-border); font-size: 11px; color: var(--text-tertiary); text-align: center;">
+                        Ctrl+Enter = Эфир
                     </div>
                 </div>
 
-                <!-- Info Card -->
-                <div class="bento-card">
-                    <div class="card-header">
-                        <span class="card-label">Перевод</span>
-                    </div>
-                    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                        <div style="font-size: 32px; font-weight: 700; margin-bottom: 8px;" id="current-translation">RST
-                        </div>
-                        <div style="color: var(--text-tertiary); font-size: 13px;">Синодальный перевод</div>
-                    </div>
-                </div>
+
             </div>
         </main>
     </div>
@@ -885,7 +877,7 @@
         const btnBroadcast = document.getElementById('btn-broadcast');
         const historyList = document.getElementById('history');
         const editArea = document.getElementById('edit-area');
-        const translationDisplay = document.getElementById('current-translation');
+
         const noteInput = document.getElementById('note-input');
 
         let currentVerse = null;
@@ -941,7 +933,6 @@
         // Update translation display and refresh verse
         document.getElementById('translation-select').addEventListener('change', async (e) => {
             const newTranslation = e.target.value;
-            translationDisplay.innerText = newTranslation;
 
             // Если есть активный стих, перезагружаем его в новом переводе
             if (currentVerse) {
