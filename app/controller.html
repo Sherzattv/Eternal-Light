@@ -590,6 +590,7 @@
         .form-range {
             width: 100%;
             -webkit-appearance: none;
+            appearance: none;
             background: var(--bg-primary);
             height: 8px;
             border-radius: 4px;
@@ -944,8 +945,19 @@
 
             // Если есть активный стих, перезагружаем его в новом переводе
             if (currentVerse) {
-                // Используем текущую ссылку для пере-поиска (например "Ин 3:16")
-                const parsed = parseQuery(currentVerse.reference);
+                // Если у нас есть ID книги, используем его напрямую (надежнее, чем парсить локализованную строку)
+                let parsed = null;
+                if (currentVerse.bookId) {
+                    parsed = {
+                        bookId: currentVerse.bookId,
+                        chapter: currentVerse.chapter,
+                        verse: currentVerse.verse,
+                        bookName: currentVerse.bookName // опционально
+                    };
+                } else {
+                    // Fallback: пробуем распарсить строку
+                    parsed = parseQuery(currentVerse.reference);
+                }
 
                 if (parsed) {
                     status.innerText = '⏳ Обновление...';

@@ -172,7 +172,8 @@ async function fetchVerse(parsed, translation = 'RST') {
                 reference: `${bookNameTitle} ${parsed.chapter}:${refVertex}`,
                 bookName: bookNameTitle,
                 chapter: parsed.chapter,
-                verse: parsed.verse
+                verse: parsed.verse,
+                bookId: parsed.bookId // Важно для переключения переводов
             };
         }
 

@@ -22,3 +22,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - **Lint Errors**: Fixed CSS appearance warnings in controller.html.
+- **Translation Switching**: Fixed issue where switching from Kazakh to Russian references didn't work.
