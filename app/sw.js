@@ -3,16 +3,18 @@
  * Обеспечивает оффлайн-доступ к приложению
  */
 
-const CACHE_NAME = 'eternal-light-v1';
+const CACHE_NAME = 'eternal-light-v2';
 const ASSETS_TO_CACHE = [
     './',
     './controller.html',
     './display.html',
     './manifest.json',
     './js/common.js',
-    './js/data/bible_rst.js',
+    './js/data/bible_data.js',
     './js/data/nrt_data.js',
-    './js/data/ktb_data.js'
+    './js/data/ktb_data.js',
+    './icons/icon-192.png',
+    './icons/icon-512.png'
 ];
 
 // Установка: кешируем все ресурсы
