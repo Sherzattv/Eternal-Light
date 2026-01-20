@@ -1,6 +1,17 @@
-node_modules
+# Dependencies
+node_modules/
+
+# System files
 .DS_Store
-sources/*.zip
-ktb_temp/
 *.log
-node_modules
+
+# Temp folders
+ktb_temp/
+temp_inspect/
+
+# Source data (large files, already converted to app/js/data/)
+sources/*.zip
+sources/*.json
+
+# IDE/Editor
+.vscode/
