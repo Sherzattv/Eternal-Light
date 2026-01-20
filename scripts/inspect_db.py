@@ -1,6 +1,6 @@
 import sqlite3
 
-db_path = "ktb_temp/KTB'22.SQLite3"
+db_path = "archive/ktb_temp/KTB'22.SQLite3"
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 

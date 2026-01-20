@@ -4,18 +4,18 @@ import json
 import os
 import zipfile
 
-db_path = "ktb_temp/KTB'22.SQLite3" 
-zip_path = "sources/kaz_bible.zip"
+db_path = "archive/ktb_temp/KTB'22.SQLite3" 
+zip_path = "archive/sources/kaz_bible.zip"
 output_file = 'app/js/data/ktb_data.js'
 
 if not os.path.exists(db_path):
     print(f"Extracting {zip_path}...")
-    os.makedirs("ktb_temp", exist_ok=True)
+    os.makedirs("archive/ktb_temp", exist_ok=True)
     with zipfile.ZipFile(zip_path, 'r') as z:
         # Search for the sqlite file in zip (in case name varies or it's in subdir)
         target_file = next((n for n in z.namelist() if n.endswith('.SQLite3')), None)
         if target_file:
-            z.extract(target_file, "ktb_temp")
+            z.extract(target_file, "archive/ktb_temp")
             # If extracted file name is different (e.g. if it had a path in zip), we might need to move it or update db_path.
             # But usually it extracts to the name. Let's just normalize to be safe or rely on it matching.
             # Simplify: just extract all to ktb_temp and find it.

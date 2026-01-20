@@ -6,12 +6,12 @@ node_modules/
 *.log
 
 # Temp folders
-ktb_temp/
-temp_inspect/
+archive/ktb_temp/
+archive/temp_inspect/
 
 # Source data (large files, already converted to app/js/data/)
-sources/*.zip
-sources/*.json
+archive/sources/*.zip
+archive/sources/*.json
 
 # IDE/Editor
 .vscode/

@@ -2,7 +2,7 @@ import json
 import os
 
 # Configuration
-INPUT_FILE = 'sources/rst.json'
+INPUT_FILE = 'archive/sources/rst.json'
 OUTPUT_FILE = 'app/js/data/bible_data.js'
 GLOBAL_VAR_NAME = 'BIBLE_DATA'
 

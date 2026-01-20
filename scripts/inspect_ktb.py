@@ -4,7 +4,7 @@ import os
 import shutil
 
 # Paths
-zip_path = 'sources/kaz_bible.zip'
+zip_path = 'archive/sources/kaz_bible.zip'
 temp_dir = 'temp_inspect'
 db_name = "KTB'22.SQLite3" # Guessed name inside zip, based on convert_ktb.py
 
