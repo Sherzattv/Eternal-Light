@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0a0b">
-    <meta name="description" content="Вечный Свет - система для вывода библейских стихов на экран. Пульт управления и отдельный экран трансляции, оффлайн, без серверов.">
+    <meta name="description"
+        content="Вечный Свет - система для вывода библейских стихов на экран. Пульт управления и отдельный экран трансляции, оффлайн, без серверов.">
     <title>Вечный Свет - трансляция стихов на экран</title>
     <link rel="icon" href="../app/icons/icon-192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="site.css">
 </head>
+
 <body>
     <header class="site-header">
         <div class="container header-grid">
-            <div class="brand">
+            <a href="index.html" class="brand">
                 <div class="brand-icon" aria-hidden="true">✦</div>
                 <span class="brand-text">Вечный Свет</span>
-            </div>
+            </a>
             <nav class="nav" aria-label="Навигация">
                 <a href="index.html#features">Возможности</a>
                 <a href="index.html#how">Как работает</a>
@@ -285,7 +290,8 @@
                             <li>Скачайте репозиторий и настройте под своё служение.</li>
                             <li>Запускайте локально (`app/controller.html`) или разместите на своём сервере.</li>
                         </ol>
-                        <a class="link" href="https://github.com/Sherzattv/Eternal-Light-" target="_blank" rel="noreferrer">Открыть GitHub -></a>
+                        <a class="link" href="https://github.com/Sherzattv/Eternal-Light-" target="_blank"
+                            rel="noreferrer">Открыть GitHub -></a>
                     </div>
                 </div>
                 <div class="card platforms-card">
@@ -385,56 +391,45 @@
                     <span class="section-eyebrow">Планы</span>
                     <h2>Что дальше</h2>
                 </div>
-                <div class="card roadmap-panel">
-                    <div class="roadmap-head">
-                        <div>
-                            <div class="roadmap-label">Ближайшие улучшения</div>
-                            <p class="roadmap-subtitle">Собираем запросы и формируем приоритеты.</p>
-                        </div>
-                        <span class="roadmap-tag">в работе</span>
+                <div class="roadmap-grid">
+                    <div class="card roadmap-card">
+                        <div class="roadmap-icon">⚡</div>
+                        <h3 class="roadmap-name">Параллельный перевод</h3>
+                        <p class="roadmap-desc">Split Screen для двух переводов одновременно.</p>
+                        <span class="roadmap-status">В работе</span>
                     </div>
-                    <div class="roadmap-list">
-                        <div class="roadmap-row">
-                            <span class="roadmap-index">01</span>
-                            <div class="roadmap-text">
-                                <div class="roadmap-name">Параллельный перевод</div>
-                                <div class="roadmap-desc">Split Screen для двух переводов.</div>
-                            </div>
-                        </div>
-                        <div class="roadmap-row">
-                            <span class="roadmap-index">02</span>
-                            <div class="roadmap-text">
-                                <div class="roadmap-name">Единый умный поиск</div>
-                                <div class="roadmap-desc">Ссылки и текст в одном поле.</div>
-                            </div>
-                        </div>
-                        <div class="roadmap-row">
-                            <span class="roadmap-index">03</span>
-                            <div class="roadmap-text">
-                                <div class="roadmap-name">Кнопки управления экраном</div>
-                                <div class="roadmap-desc">Показать, скрыть, затемнение, полный экран.</div>
-                            </div>
-                        </div>
-                        <div class="roadmap-row">
-                            <span class="roadmap-index">04</span>
-                            <div class="roadmap-text">
-                                <div class="roadmap-name">Навигация по книгам</div>
-                                <div class="roadmap-desc">Книга -> глава -> стих для новичков.</div>
-                            </div>
-                        </div>
-                        <div class="roadmap-row">
-                            <span class="roadmap-index">05</span>
-                            <div class="roadmap-text">
-                                <div class="roadmap-name">Новые темы оформления</div>
-                                <div class="roadmap-desc">Премиум-фоны и стили для экрана.</div>
-                            </div>
-                        </div>
+                    <div class="card roadmap-card">
+                        <div class="roadmap-icon">🔍</div>
+                        <h3 class="roadmap-name">Единый умный поиск</h3>
+                        <p class="roadmap-desc">Ссылки и текст в одном поле ввода.</p>
+                        <span class="roadmap-status">В работе</span>
                     </div>
-                    <div class="roadmap-footnote">
-                        <span class="roadmap-note-title">Некоммерческий проект.</span>
-                        <span>Функции появляются по мере спроса - поэтому пишите, что важно именно вам.</span>
-                        <a class="roadmap-link" href="contacts.html#feedback">Написать команде</a>
+                    <div class="card roadmap-card">
+                        <div class="roadmap-icon">🎛️</div>
+                        <h3 class="roadmap-name">Управление экраном</h3>
+                        <p class="roadmap-desc">Показать, скрыть, затемнение, полный экран.</p>
                     </div>
+                    <div class="card roadmap-card">
+                        <div class="roadmap-icon">📖</div>
+                        <h3 class="roadmap-name">Навигация по книгам</h3>
+                        <p class="roadmap-desc">Книга -> глава -> стих для удобства новичков.</p>
+                    </div>
+                    <div class="card roadmap-card">
+                        <div class="roadmap-icon">🎨</div>
+                        <h3 class="roadmap-name">Новые темы</h3>
+                        <p class="roadmap-desc">Премиум-фоны и стили для экрана трансляции.</p>
+                    </div>
+                    <div class="card roadmap-card highlight">
+                        <div class="roadmap-icon">💡</div>
+                        <h3 class="roadmap-name">Ваша идея?</h3>
+                        <p class="roadmap-desc">Пишите нам, мы реализуем то, что нужно вам.</p>
+                        <a href="contacts.html#feedback" class="roadmap-link-overlay"></a>
+                    </div>
+                </div>
+                <div class="roadmap-footnote">
+                    <span class="roadmap-note-title">Некоммерческий проект.</span>
+                    <span>Функции появляются по мере спроса - пишите, что важно именно вам.</span>
+                    <a class="roadmap-link" href="contacts.html#feedback">Написать команде</a>
                 </div>
             </div>
         </section>
@@ -456,13 +451,13 @@
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
+            <a href="index.html" class="footer-brand">
                 <div class="brand-icon" aria-hidden="true">✦</div>
                 <div>
                     <div class="footer-title">Вечный Свет</div>
                     <div class="footer-sub">Служение через технологии</div>
                 </div>
-            </div>
+            </a>
             <div class="footer-links">
                 <a href="contacts.html">Контакты</a>
                 <a href="contacts.html#feedback">Обратная связь</a>
@@ -511,4 +506,5 @@
         }
     </script>
 </body>
+
 </html>
