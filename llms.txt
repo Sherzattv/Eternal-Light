@@ -1,0 +1,23 @@
+# Вечный Свет (Eternal Light)
+
+## Summary
+Вечный Свет — PWA-система для трансляции библейских стихов на экран и проектор. Пульт управления и отдельный экран для зала, работает оффлайн и без серверов.
+
+## Primary URLs
+- https://sherzattv.github.io/Eternal-Light/
+- https://sherzattv.github.io/Eternal-Light/contacts.html
+- https://sherzattv.github.io/Eternal-Light/app/controller.html
+
+## Features
+- Пульт управления для служителя
+- Отдельный экран трансляции
+- Поиск по ссылке и по тексту
+- 3 перевода: RST, NRT, KTB
+- Оффлайн-режим (PWA)
+
+## Contact
+- Telegram: https://t.me/sherzattv
+- Email: sherzat.tursumetov@gmail.com
+
+## License
+- MIT
