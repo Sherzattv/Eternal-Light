@@ -1397,6 +1397,16 @@ kbd {
     border-color: rgba(99, 102, 241, 0.3);
 }
 
+
+.card p code {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    background: rgba(99, 102, 241, 0.15);
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 90%;
+    color: #c7c9ff;
+}
+
 .format-card code {
     font-family: 'JetBrains Mono', 'SF Mono', monospace;
     background: rgba(99, 102, 241, 0.15);
@@ -1805,9 +1815,25 @@ kbd {
     padding: 12px 0;
 }
 
+
 .support-column h3 {
     margin-bottom: 0;
     padding-left: 4px;
     font-size: 18px;
     color: var(--text-secondary);
+}
+
+.support-panel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .support-panel {
+        padding: 20px;
+        gap: 24px;
+    }
 }
